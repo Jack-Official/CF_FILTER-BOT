@@ -82,9 +82,9 @@ async def start(client, message):
             except (IndexError, ValueError):
                 btn.append([InlineKeyboardButton(" 🔃Try Again🔃", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_photo(
-            photo=FORCE_IMG,
+            photo="https://telegra.ph/file/f5d411fba25ecfa5197fe.jpg",
             chat_id=message.from_user.id,
-            text=FORCE_SUB_TEXT,
+            caption=FORCE_SUB_TEXT,
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.DEFAULT
             )
