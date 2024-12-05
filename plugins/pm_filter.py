@@ -148,18 +148,18 @@ async def pm_next_page(bot, query):
     if n_offset == 0:
         btn.append(
             [InlineKeyboardButton("⤶ ʙᴀᴄᴋ", callback_data=f"pmnext_{req}_{key}_{off_set}"),
-             InlineKeyboardButton(f"📕 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} 📕", callback_data="pages")]                                  
+             InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages")]                                  
         )
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton("❏ ᴘᴀɢᴇ:", callback_data="pages"), 
-             InlineKeyboardButton(f"📗 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} 📗", callback_data="pages"),
+             InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
              InlineKeyboardButton("ɴᴇxᴛ ⤷", callback_data=f"pmnext_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
                 InlineKeyboardButton("⤶ ʙᴀᴄᴋ", callback_data=f"pmnext_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"📘 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} 📘", callback_data="pages"),
+                InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
                 InlineKeyboardButton("ɴᴇxᴛ ⤷", callback_data=f"pmnext_{req}_{key}_{n_offset}")
             ],
         )
@@ -240,19 +240,19 @@ async def next_page(bot, query):
     if n_offset == 0:
         btn.append(
             [InlineKeyboardButton("⤶ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
-             InlineKeyboardButton(f"📕 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} 📕",
+             InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}",
                                   callback_data="pages")]
         )
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton("❏ ᴘᴀɢᴇ", callback_data="pages"), 
-             InlineKeyboardButton(f"📗 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} 📗", callback_data="pages"),
+             InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
              InlineKeyboardButton("ɴᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
                 InlineKeyboardButton("⤶ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"📘 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} 📘", callback_data="pages"),
+                InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
                 InlineKeyboardButton("ɴᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
@@ -529,8 +529,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     protect_content=True if ident == "pmfilep" else False,
                     reply_markup=InlineKeyboardMarkup(
                         [[                          
-                          InlineKeyboardButton("𝖬𝗈𝗏𝗂𝖾 𝖦𝗋𝗈𝗎𝗉 1", url='https://t.me/Mallu_Movie_Hub_Group'),
-                          InlineKeyboardButton("𝖬𝗈𝗏𝗂𝖾 𝖦𝗋𝗈𝗎𝗉 2", url='https://t.me/+iEbhY7mM4oE1OTVl')
+                          InlineKeyboardButton('🚸 ᴅᴇʟᴇᴛᴇ', callback_data='close_data')
                         ]]
                     )
                 )                       
@@ -574,8 +573,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     protect_content=True if ident == "filep" else False,
                     reply_markup=InlineKeyboardMarkup(
                         [[                          
-                          InlineKeyboardButton("𝖬𝗈𝗏𝗂𝖾 𝖦𝗋𝗈𝗎𝗉 1", url='https://t.me/Mallu_Movie_Hub_Group'),
-                          InlineKeyboardButton("𝖬𝗈𝗏𝗂𝖾 𝖦𝗋𝗈𝗎𝗉 2", url='https://t.me/+iEbhY7mM4oE1OTVl')
+                          InlineKeyboardButton('🚸 ᴅᴇʟᴇᴛᴇ', callback_data='close_data')
                         ]]
                     )
                 )
@@ -615,8 +613,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             protect_content=True if ident == 'checksubp' else False,
             reply_markup=InlineKeyboardMarkup(
                 [[                          
-                  InlineKeyboardButton("𝖬𝗈𝗏𝗂𝖾 𝖦𝗋𝗈𝗎𝗉 1", url='https://t.me/Mallu_Movie_Hub_Group'),
-                  InlineKeyboardButton("𝖬𝗈𝗏𝗂𝖾 𝖦𝗋𝗈𝗎𝗉 2", url='https://t.me/+iEbhY7mM4oE1OTVl')
+                  InlineKeyboardButton('🚸 ᴅᴇʟᴇᴛᴇ', callback_data='close_data') 
                 ]]
             )
         )
