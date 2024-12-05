@@ -285,7 +285,7 @@ async def advantage_spoll_choker(bot, query):
             await auto_filter(bot, query, k)
         else:
             one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🔍 sᴇᴀʀᴄʜ ɪɴ ɢᴏᴏɢʟᴇ 🔎", url="https://www.google.com")]])
-            k = await query.message.edit('<b>👋Hey {message.from_user.mention}</b>\n\nHere is movie request format👇\n\n• Go to Google\n\n• Type the movie name you want\n\n• Copy the movie name with correct spelling\n\n• Then paste the movie name here in this group\n\n<b>🚫 Dont Spam 🚫</b>', reply_markup = one_button)
+            k = await query.message.edit('<b>👋Hᴇʏ <a href=tg://settings>ᴍʏ ғʀɪᴇɴᴅ</b></a>\n\n<b>Hᴇʀᴇ ɪs ᴍᴏᴠɪᴇ ʀᴇϙᴜᴇsᴛ ғᴏʀᴍᴀᴛ :👇</b>\n\n<b>➲ Gᴏ ᴛᴏ Gᴏᴏɢʟᴇ</b>\n\n<b>➲ Tʏᴘᴇ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ʏᴏᴜ ᴡᴀɴᴛ</b>\n\n<b>➲ Cᴏᴘʏ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ᴡɪᴛʜ ᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ</b>\n\n<b>➲ Tʜᴇɴ ᴘᴀsᴛᴇ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ʜᴇʀᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ</b>\n\n<b><u>🚫 Dᴏɴᴛ Sᴘᴀᴍ 🚫</u></b>', reply_markup = one_button)
             await asyncio.sleep(99)
             await k.delete()
 
@@ -306,7 +306,7 @@ async def pm_spoll_tester(bot, query):
         await pm_AutoFilter(bot, query, k)
     else:
         one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🔍 sᴇᴀʀᴄʜ ɪɴ ɢᴏᴏɢʟᴇ 🔎", url="https://www.google.com")]])
-        k = await query.message.edit('<b>👋Hey {message.from_user.mention}</b>\n\n<b>Hᴇʀᴇ ɪs ᴍᴏᴠɪᴇ ʀᴇϙᴜᴇsᴛ ғᴏʀᴍᴀᴛ :👇</b>\n\n<b>➲ Gᴏ ᴛᴏ Gᴏᴏɢʟᴇ</b>\n\n<b>➲ Tʏᴘᴇ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ʏᴏᴜ ᴡᴀɴᴛ</b>\n\n<b>➲ Cᴏᴘʏ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ᴡɪᴛʜ ᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ</b>\n\n<b>➲ Tʜᴇɴ ᴘᴀsᴛᴇ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ʜᴇʀᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ</b>\n\n<b><u>🚫 Dont Spam 🚫</u></b>', reply_markup = one_button)
+        k = await query.message.edit('<b>👋Hᴇʏ <a href=tg://settings>ᴍʏ ғʀɪᴇɴᴅ</b></a>\n\n<b>Hᴇʀᴇ ɪs ᴍᴏᴠɪᴇ ʀᴇϙᴜᴇsᴛ ғᴏʀᴍᴀᴛ :👇</b>\n\n<b>➲ Gᴏ ᴛᴏ Gᴏᴏɢʟᴇ</b>\n\n<b>➲ Tʏᴘᴇ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ʏᴏᴜ ᴡᴀɴᴛ</b>\n\n<b>➲ Cᴏᴘʏ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ᴡɪᴛʜ ᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ</b>\n\n<b>➲ Tʜᴇɴ ᴘᴀsᴛᴇ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ʜᴇʀᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ</b>\n\n<b><u>🚫 Dᴏɴᴛ Sᴘᴀᴍ 🚫</u></b>', reply_markup = one_button)
         await asyncio.sleep(99)
         await k.delete()
 
