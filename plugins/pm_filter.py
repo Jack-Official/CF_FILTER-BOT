@@ -226,8 +226,8 @@ async def next_page(bot, query):
     )
     btn.insert(1,
         [
-            InlineKeyboardButton("⚡Check My Pm⚡", url=f"https://t.me/{temp.U_NAME}"),
-            InlineKeyboardButton("⚠️Main Channel⚠️", url="https://t.me/cinema_flix_updates")
+            InlineKeyboardButton("⚡Cʜᴇᴄᴋ Mʏ Pᴍ⚡", url=f"https://t.me/{temp.U_NAME}"),
+            InlineKeyboardButton("⚠️Mᴀɪɴ Cʜᴀɴɴᴇʟ⚠️", url="https://t.me/cinema_flix_updates")
         ]
     )    
 
@@ -1037,8 +1037,8 @@ async def auto_filter(client, msg, spoll=False):
     )
     btn.insert(1,
         [
-            InlineKeyboardButton("⚡Check My Pm⚡", url=f"https://t.me/{temp.U_NAME}"),
-            InlineKeyboardButton("⚠️Main Channel⚠️", url="https://t.me/cinema_flix_updates")
+            InlineKeyboardButton("⚡Cʜᴇᴄᴋ Mʏ Pᴍ⚡", url=f"https://t.me/{temp.U_NAME}"),
+            InlineKeyboardButton("⚠️Mᴀɪɴ Cʜᴀɴɴᴇʟ⚠️", url="https://t.me/cinema_flix_updates")
         ]
     )
     if offset != "":
