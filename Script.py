@@ -39,9 +39,9 @@ class script(object):
 
 <b>⪼ 🍃 𝖡𝗈𝗍 𝖴𝗌𝖾𝗋𝗇𝖺𝗆𝖾 : @{}</b> """   
 
-    CUSTOM_FILE_CAPTION = """<b><code>{file_name}</code></b>
+    CUSTOM_FILE_CAPTION = """<b>ғɪʟᴇ ɴᴀᴍᴇ :</b><b><code>{file_name}</code></b>
 
-  <b>sɪᴢᴇ :</b>
+  <b>ғɪʟᴇ sɪᴢᴇ :</b>
    
   <b>ᴊᴏɪɴ ɴᴏᴡ: @cinema_flix_updates</b>
 
