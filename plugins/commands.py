@@ -220,8 +220,7 @@ async def start(client, message):
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=InlineKeyboardMarkup(
                     [[                          
-                      InlineKeyboardButton("𝖬𝗈𝗏𝗂𝖾 𝖦𝗋𝗈𝗎𝗉 1", url='https://t.me/Mallu_Movie_Hub_Group'),
-                      InlineKeyboardButton("𝖬𝗈𝗏𝗂𝖾 𝖦𝗋𝗈𝗎𝗉 2", url='https://t.me/+iEbhY7mM4oE1OTVl')
+                      InlineKeyboardButton('🚸 ᴅᴇʟᴇᴛᴇ', callback_data='close_data')
                     ]]
                 )
             )
@@ -259,8 +258,7 @@ async def start(client, message):
         protect_content=True if pre == 'filep' else False,
         reply_markup=InlineKeyboardMarkup(
             [[                          
-               InlineKeyboardButton("𝖬𝗈𝗏𝗂𝖾 𝖦𝗋𝗈𝗎𝗉 1", url='https://t.me/Mallu_Movie_Hub_Group'),
-               InlineKeyboardButton("𝖬𝗈𝗏𝗂𝖾 𝖦𝗋𝗈𝗎𝗉 2", url='https://t.me/+iEbhY7mM4oE1OTVl')
+               InlineKeyboardButton('🚸 ᴅᴇʟᴇᴛᴇ', callback_data='close_data')
             ]]
            )
         )
