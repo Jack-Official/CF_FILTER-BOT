@@ -137,7 +137,7 @@ async def pm_next_page(bot, query):
     if not files:
         return
     
-    btn = [[InlineKeyboardButton(text=f"◽ [{get_size(file.file_size)}] ◾ {file.file_name}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
+    btn = [[InlineKeyboardButton(text=f"🗃 [{get_size(file.file_size)}] ᐅ {file.file_name}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
                 
     if 0 < offset <= 10:
         off_set = 0
@@ -200,7 +200,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"◽ [{get_size(file.file_size)}] ◾ {file.file_name}", callback_data=f'files#{nxreq}#{file.file_id}'
+                    text=f"🗃 [{get_size(file.file_size)}] ᐅ {file.file_name}", callback_data=f'files#{nxreq}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -209,10 +209,10 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"◾ {file.file_name}", callback_data=f'files#{nxreq}#{file.file_id}'
+                    text=f" {file.file_name}", callback_data=f'files#{nxreq}#{file.file_id}'
                 ),
                 InlineKeyboardButton(
-                    text=f"◽ {get_size(file.file_size)}",
+                    text=f" {get_size(file.file_size)}",
                     callback_data=f'files#{nxreq}#{file.file_id}',
                 ),
             ]
@@ -284,7 +284,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🔍 Search in Google 🔎", url="https://www.google.com")]])
+            one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🔍 sᴇᴀʀᴄʜ ɪɴ ɢᴏᴏɢʟᴇ 🔎", url="https://www.google.com")]])
             k = await query.message.edit('<b>👋Hey {message.from_user.mention}</b>\n\nHere is movie request format👇\n\n• Go to Google\n\n• Type the movie name you want\n\n• Copy the movie name with correct spelling\n\n• Then paste the movie name here in this group\n\n<b>🚫 Dont Spam 🚫</b>', reply_markup = one_button)
             await asyncio.sleep(99)
             await k.delete()
@@ -305,8 +305,8 @@ async def pm_spoll_tester(bot, query):
         k = (movie, files, offset, total_results)
         await pm_AutoFilter(bot, query, k)
     else:
-        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🔍 Search in Google 🔎", url="https://www.google.com")]])
-        k = await query.message.edit('<b>👋Hey {message.from_user.mention}</b>\n\nHere is movie request format👇\n\n• Go to Google\n\n• Type the movie name you want\n\n• Copy the movie name with correct spelling\n\n• Then paste the movie name here in this group\n\n<b>🚫 Dont Spam 🚫</b>', reply_markup = one_button)
+        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🔍 sᴇᴀʀᴄʜ ɪɴ ɢᴏᴏɢʟᴇ 🔎", url="https://www.google.com")]])
+        k = await query.message.edit('<b>👋Hey {message.from_user.mention}</b>\n\n<b>Hᴇʀᴇ ɪs ᴍᴏᴠɪᴇ ʀᴇϙᴜᴇsᴛ ғᴏʀᴍᴀᴛ :👇</b>\n\n<b>➲ Gᴏ ᴛᴏ Gᴏᴏɢʟᴇ</b>\n\n<b>➲ Tʏᴘᴇ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ʏᴏᴜ ᴡᴀɴᴛ</b>\n\n<b>➲ Cᴏᴘʏ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ᴡɪᴛʜ ᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ</b>\n\n<b>➲ Tʜᴇɴ ᴘᴀsᴛᴇ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ʜᴇʀᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ</b>\n\n<b><u>🚫 Dont Spam 🚫</u></b>', reply_markup = one_button)
         await asyncio.sleep(99)
         await k.delete()
 
@@ -1011,7 +1011,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🗃 ⟪ {get_size(file.file_size)} ⟫ 🎥 {file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'
+                    text=f"🗃 [{get_size(file.file_size)}] ᐅ {file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -1020,11 +1020,11 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"⟫ 🎥 {file.file_name}",
+                    text=f" {file.file_name}",
                     callback_data=f'{pre}#{req}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"🗃 ⟪ {get_size(file.file_size)}",
+                    text=f" {get_size(file.file_size)}",
                     callback_data=f'{pre}#{req}#{file.file_id}',
                 ),
             ]
