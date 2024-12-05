@@ -41,7 +41,7 @@ class script(object):
 
     CUSTOM_FILE_CAPTION = """<b>ғɪʟᴇ ɴᴀᴍᴇ :</b><b><code>{file_name}</code></b>
 
-  <b>ғɪʟᴇ sɪᴢᴇ :</b>
+  <b>ғɪʟᴇ sɪᴢᴇ :</b><b><code>{file_size}</code></b>
    
   <b>ᴊᴏɪɴ ɴᴏᴡ: @cinema_flix_updates</b>
 
