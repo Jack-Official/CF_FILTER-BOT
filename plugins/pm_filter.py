@@ -147,20 +147,20 @@ async def pm_next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("⤶ʙᴀᴄᴋ", callback_data=f"pmnext_{req}_{key}_{off_set}"),
-             InlineKeyboardButton(f"◽ {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} ◽", callback_data="pages")]                                  
+            [InlineKeyboardButton("⤶ ʙᴀᴄᴋ", callback_data=f"pmnext_{req}_{key}_{off_set}"),
+             InlineKeyboardButton(f"📕 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} 📕", callback_data="pages")]                                  
         )
     elif off_set is None:
         btn.append(
-            [InlineKeyboardButton("◽ᴩᴀɢᴇꜱ", callback_data="pages"), 
-             InlineKeyboardButton(f"◽ {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} ◽", callback_data="pages"),
-             InlineKeyboardButton("ɴᴇxᴛ⤷", callback_data=f"pmnext_{req}_{key}_{n_offset}")])
+            [InlineKeyboardButton("❏ ᴘᴀɢᴇ:", callback_data="pages"), 
+             InlineKeyboardButton(f"📗 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} 📗", callback_data="pages"),
+             InlineKeyboardButton("ɴᴇxᴛ ⤷", callback_data=f"pmnext_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
-                InlineKeyboardButton("⤶ʙᴀᴄᴋ", callback_data=f"pmnext_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"◽ {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} ◽", callback_data="pages"),
-                InlineKeyboardButton("ɴᴇxᴛ⤷", callback_data=f"pmnext_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("⤶ ʙᴀᴄᴋ", callback_data=f"pmnext_{req}_{key}_{off_set}"),
+                InlineKeyboardButton(f"📘 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} 📘", callback_data="pages"),
+                InlineKeyboardButton("ɴᴇxᴛ ⤷", callback_data=f"pmnext_{req}_{key}_{n_offset}")
             ],
         )
     try:
@@ -239,21 +239,21 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("⤶ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
-             InlineKeyboardButton(f"◽ {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} ◽",
+            [InlineKeyboardButton("⤶ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
+             InlineKeyboardButton(f"📕 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} 📕",
                                   callback_data="pages")]
         )
     elif off_set is None:
         btn.append(
-            [InlineKeyboardButton("◽ᴩᴀɢᴇꜱ", callback_data="pages"), 
-             InlineKeyboardButton(f"◽ {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} ◽", callback_data="pages"),
-             InlineKeyboardButton("ɴᴇxᴛ⤷", callback_data=f"next_{req}_{key}_{n_offset}")])
+            [InlineKeyboardButton("❏ ᴘᴀɢᴇ", callback_data="pages"), 
+             InlineKeyboardButton(f"📗 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} 📗", callback_data="pages"),
+             InlineKeyboardButton("ɴᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
-                InlineKeyboardButton("⤶ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"◽ {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} ◽", callback_data="pages"),
-                InlineKeyboardButton("ɴᴇxᴛ⤷", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("⤶ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton(f"📘 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)} 📘", callback_data="pages"),
+                InlineKeyboardButton("ɴᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     try:
@@ -1046,13 +1046,13 @@ async def auto_filter(client, msg, spoll=False):
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), 
+            [InlineKeyboardButton("❏ ᴘᴀɢᴇ", callback_data="pages"), 
              InlineKeyboardButton(text=f"1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
-             InlineKeyboardButton(text="Nᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{offset}")]
+             InlineKeyboardButton(text="ɴᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="❕No More Next Pages❕", callback_data="pages")]
+            [InlineKeyboardButton(text="❕ɴᴏ ᴍᴏʀᴇ ɴᴇxᴛ ᴘᴀɢᴇs❕", callback_data="pages")]
         )                   
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
@@ -1091,7 +1091,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>👋 Hey {message.from_user.mention},🎉</b>\n\n<b>📁 Movie Name :</b> <b><code>{search}</code></b>\n<b>🗃 Total File :</b> <b>{str(total_results)}</b>\n\n<b>{message.chat.title}</b>"
+        cap = f"<b>👋 Hᴇʏ {message.from_user.mention},🎉</b>\n\n<b>📁 Movie Name :</b> <b><code>{search}</code></b>\n<b>🗃 Total File :</b> <b>{str(total_results)}</b>\n\n<b>{message.chat.title}</b>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
