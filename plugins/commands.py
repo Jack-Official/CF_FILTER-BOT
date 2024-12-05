@@ -25,7 +25,7 @@ async def start(client, message):
             InlineKeyboardButton('➜ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➜', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('📢ᴏᴛᴛ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/cinema_flix_updates'),
-            InlineKeyboardButton('Movie Group🎬', url='https://t.me/+iEbhY7mM4oE1OTVl')
+            InlineKeyboardButton('ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ🎬', url='https://t.me/+iEbhY7mM4oE1OTVl')
             ],[
             InlineKeyboardButton('〄 Check My Pm 〄', url=f"https://t.me/{temp.U_NAME}?start=help")
             ]]
