@@ -353,7 +353,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         await query.answer("🚫 𝗡𝗼 𝗙𝗶𝗹𝗲 𝗪𝗲𝗿𝗲 𝗙𝗼𝘂𝗻𝗱 🚫", show_alert=1)
         return
 
-    settings = await get_settings(message.chat.id)
+    settings = await get_settings(msg.message.chat.id)
     if settings["button"]:
         btn = [
             [
@@ -384,9 +384,6 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         ]
     ) 
     if offset != "":
-        key = f"{message.chat.id}-{message.id}"
-        BUTTONS[key] = search
-        req = message.from_user.id if message.from_user else 0
         btn.append(
             [InlineKeyboardButton("❏ ᴘᴀɢᴇ", callback_data="pages"), 
              InlineKeyboardButton(text=f"1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
