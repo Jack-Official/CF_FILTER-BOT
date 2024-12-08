@@ -354,11 +354,11 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         return
 
     settings = await get_settings(message.chat.id)
-    if settings['button']:
+    if settings["button"]:
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f" [{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'
+                    text=f"🗃 [{get_size(file.file_size)}] ᐅ {file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -367,32 +367,22 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}',
+                    text=f" {file.file_name}",
+                    callback_data=f'{pre}#{req}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
+                    text=f" {get_size(file.file_size)}",
                     callback_data=f'{pre}#{req}#{file.file_id}',
                 ),
             ]
             for file in files
         ]
-    BUTTONS[key] = search
     btn.insert(0, 
-        [
+          [
             InlineKeyboardButton("⚡Cʜᴇᴄᴋ Mʏ Pᴍ⚡", url=f"https://t.me/{temp.U_NAME}"),
-            InlineKeyboardButton("⚠️Mᴀɪɴ Cʜᴀɴɴᴇʟ⚠️", url="https://t.me/cinema_flix_updates")
-        ]
-    )
-    if offset != "":
-        btn.append(
-            [InlineKeyboardButton("❏ ᴘᴀɢᴇ", callback_data="pages"), 
-             InlineKeyboardButton(text=f"1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
-             InlineKeyboardButton(text="ɴᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{offset}")]
-        )
-    else:
-        btn.append(
-            [InlineKeyboardButton(text="❕ɴᴏ ᴍᴏʀᴇ ɴᴇxᴛ ᴘᴀɢᴇs❕", callback_data="pages")]
-        )
+            InlineKeyboardButton("Update Channel", url="https://t.me/cinema_flix_updates")
+          ]
+        )  
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
