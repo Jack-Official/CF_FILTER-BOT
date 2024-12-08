@@ -29,7 +29,7 @@ FILTER_MODE = {}
 G_MODE = {}
 
 # Choose Option Settings 
-LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
+LANGUAGES = ["malayalam", "mal", "tamil", "tam", "english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
 
              
 @Client.on_message(filters.command('autofilter') & filters.group & admin_fliter)
