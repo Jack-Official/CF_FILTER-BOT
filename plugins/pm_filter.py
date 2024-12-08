@@ -381,14 +381,14 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     btn.insert(0, 
         [
             InlineKeyboardButton("⚡Cʜᴇᴄᴋ Mʏ Pᴍ⚡", url=f"https://t.me/{temp.U_NAME}"),
-            InlineKeyboardButton("⚠️Mᴀɪɴ Cʜᴀɴɴᴇʟ⚠️", url='https://t.me/cinema_flix_updates')
+            InlineKeyboardButton("⚠️Mᴀɪɴ Cʜᴀɴɴᴇʟ⚠️", url="https://t.me/cinema_flix_updates")
         ]
     )
     if offset != "":
         btn.append(
-            [InlineKeyboardButton("📖 𝑷𝒂𝒈𝒆𝒔", callback_data="pages"), 
-             InlineKeyboardButton(text=f"1/{math.ceil(int(total)/8)}",callback_data="pages"), 
-             InlineKeyboardButton(text="𝑵𝒆𝒙𝒕 ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton("❏ ᴘᴀɢᴇ", callback_data="pages"), 
+             InlineKeyboardButton(text=f"1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
+             InlineKeyboardButton(text="ɴᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
