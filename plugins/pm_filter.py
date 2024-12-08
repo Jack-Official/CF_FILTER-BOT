@@ -380,8 +380,8 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     BUTTONS[key] = search
     btn.insert(0, 
         [
-            InlineKeyboardButton("🔻𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 𝐅𝐈𝐋𝐄𝐒🔻", callback_data=f"send_fall#{key}"),
-           InlineKeyboardButton("🔻𝐋𝐀𝐍𝐆𝐔𝐀𝐆𝐄𝐒🔻", 
+            InlineKeyboardButton("⚡Cʜᴇᴄᴋ Mʏ Pᴍ⚡", url=f"https://t.me/{temp.U_NAME}"),
+            InlineKeyboardButton("⚠️Mᴀɪɴ Cʜᴀɴɴᴇʟ⚠️", url="https://t.me/cinema_flix_updates")
         ]
     )
     if offset != "":
@@ -390,7 +390,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         )
     else:
         btn.append(
-                    [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+BYcim_eiF3swMDhl")]
+            [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+BYcim_eiF3swMDhl")]
         )
     await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
 
