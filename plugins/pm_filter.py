@@ -395,7 +395,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             [InlineKeyboardButton(text="❕ɴᴏ ᴍᴏʀᴇ ɴᴇxᴛ ᴘᴀɢᴇs❕", callback_data="pages")]
         )
     await query.edit_message_reply_markup(
-        reply_markup=InlineKeyboardMarkup(btn)
+        reply_markup=InlineKeyboardMarkup(btn))
 
 
 @Client.on_callback_query(filters.regex(r"^pmspolling"))
