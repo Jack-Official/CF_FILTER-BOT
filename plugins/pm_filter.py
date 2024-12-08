@@ -268,7 +268,6 @@ async def next_page(bot, query):
         pass
     await query.answer()
 
-
 @Client.on_callback_query(filters.regex(r"^spolling"))
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
@@ -401,6 +400,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     except MessageNotModified:
         pass
     await query.answer()
+
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
