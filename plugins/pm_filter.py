@@ -28,8 +28,8 @@ PM_SPELL_CHECK = {}
 FILTER_MODE = {}
 G_MODE = {}
 
-
-LANGUAGES = ["malayalam", "tamil", "english", "hindi", "telugu", "kannada"]
+# Choose Option Settings 
+LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
 
              
 @Client.on_message(filters.command('autofilter') & filters.group & admin_fliter)
