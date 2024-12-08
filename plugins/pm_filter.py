@@ -359,7 +359,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"《{get_size(file.file_size)}》{file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f" [{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -381,7 +381,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     btn.insert(0, 
         [
             InlineKeyboardButton("⚡Cʜᴇᴄᴋ Mʏ Pᴍ⚡", url=f"https://t.me/{temp.U_NAME}"),
-            InlineKeyboardButton("⚠️Mᴀɪɴ Cʜᴀɴɴᴇʟ⚠️", url="https://t.me/cinema_flix_updates")
+            InlineKeyboardButton("⚠️Mᴀɪɴ Cʜᴀɴɴᴇʟ⚠️", url='https://t.me/cinema_flix_updates')
         ]
     )
     if offset != "":
