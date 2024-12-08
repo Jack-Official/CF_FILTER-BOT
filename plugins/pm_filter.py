@@ -386,13 +386,16 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     )
     if offset != "":
         btn.append(
-            [InlineKeyboardButton("📖 𝑷𝒂𝒈𝒆𝒔", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total)/8)}",callback_data="pages"), InlineKeyboardButton(text="𝑵𝒆𝒙𝒕 ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton("📖 𝑷𝒂𝒈𝒆𝒔", callback_data="pages"), 
+             InlineKeyboardButton(text=f"1/{math.ceil(int(total)/8)}",callback_data="pages"), 
+             InlineKeyboardButton(text="𝑵𝒆𝒙𝒕 ⏩",callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+BYcim_eiF3swMDhl")]
+            [InlineKeyboardButton(text="❕ɴᴏ ᴍᴏʀᴇ ɴᴇxᴛ ᴘᴀɢᴇs❕", callback_data="pages")]
         )
-    await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
+    await query.edit_message_reply_markup(
+        reply_markup=InlineKeyboardMarkup(btn)
 
 
 @Client.on_callback_query(filters.regex(r"^pmspolling"))
