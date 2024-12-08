@@ -122,6 +122,7 @@ async def pv_filter(client, message):
     if kd == False:
         await auto_filter(client, message)
         
+
 @Client.on_callback_query(filters.regex(r"^pmnext"))
 async def pm_next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
@@ -143,30 +144,7 @@ async def pm_next_page(bot, query):
     if not files:
         return
     
-    btn = [[InlineKeyboardButton(text=f"🗃 [{get_size(file.file_size)}] ᐅ {file.file_name}", callback_data=f'pmfile#{file.file_id}'
-     ),
-            ]
-            for file in files
-        ]
-        
-    btn.insert(0, 
-        [
-            InlineKeyboardButton(f'🌟 {search} 🌟', 'dupe')
-        ]
-    )
-    btn.insert(1,
-        [
-            InlineKeyboardButton("🔻𝐋𝐀𝐍𝐆𝐔𝐀𝐆𝐄𝐒🔻", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-            InlineKeyboardButton("⚠️Mᴀɪɴ Cʜᴀɴɴᴇʟ⚠️", url="https://t.me/cinema_flix_updates")
-        ]
-    ) 
-    btn.insert(2, 
-        [
-           InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{search.replace(' ', '_')}#{key}"),          
-           InlineKeyboardButton("sᴇᴀsᴏɴs", callback_data=f"seasons#{search.replace(' ', '_')}#{key}"),
-           InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{search.replace(' ', '_')}#{key}")
-        ]
-              )
+    btn = [[InlineKeyboardButton(text=f"🗃 [{get_size(file.file_size)}] ᐅ {file.file_name}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
                 
     if 0 < offset <= 10:
         off_set = 0
@@ -199,7 +177,6 @@ async def pm_next_page(bot, query):
     except MessageNotModified:
         pass
     await query.answer()
-
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
