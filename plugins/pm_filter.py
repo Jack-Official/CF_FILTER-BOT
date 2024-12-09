@@ -318,7 +318,7 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
     offset = 0
     btn.append([InlineKeyboardButton(text="↺ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ↻", callback_data=f"next_{req}_{key}_{offset}")])
     
-   await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
+    await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
 
 @Client.on_callback_query(filters.regex(r"^fl#"))
 async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
