@@ -378,12 +378,12 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             [InlineKeyboardButton(text="❕ɴᴏ ᴍᴏʀᴇ ɴᴇxᴛ ᴘᴀɢᴇs❕", callback_data="pages")]
          )
      try:
-        await query.edit_message_reply_markup(
+         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
-        )
-    except MessageNotModified:
-        pass
-    await query.answer()
+         )
+     except MessageNotModified:
+         pass
+     await query.answer()
 
 
 @Client.on_callback_query()
