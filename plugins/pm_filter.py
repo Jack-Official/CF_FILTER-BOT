@@ -383,7 +383,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         )
     except MessageNotModified:
         pass
-     await query.answer()
+    await query.answer()
 
 
 @Client.on_callback_query()
