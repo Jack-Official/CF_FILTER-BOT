@@ -1104,11 +1104,9 @@ async def auto_filter(client, msg, spoll=False):
         ]
     btn.insert(0, 
         [
-            InlineKeyboardButton("🎙️Select Your File Language🎙️", callback_data=f"languages#{key}")
+            InlineKeyboardButton("🔻𝐋𝐀𝐍𝐆𝐔𝐀𝐆𝐄𝐒🔻", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
         ]
     )  
-
-    
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
