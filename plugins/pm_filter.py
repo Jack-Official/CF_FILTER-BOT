@@ -1102,7 +1102,7 @@ async def auto_filter(client, msg, spoll=False):
         ]
     btn.insert(0, 
         [
-            InlineKeyboardButton("🎙️SELECT YOUR FILE LANGUAGES 🎙️", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+            InlineKeyboardButton("🎙️SELECT YOUR FILE LANGUAGES 🎙️", callback_data=f"languages#{key}#{offset}#{req}")
         ]
     )  
     if offset != "":
