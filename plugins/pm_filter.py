@@ -1104,7 +1104,7 @@ async def auto_filter(client, msg, spoll=False):
         ]
     btn.insert(0, 
         [
-            InlineKeyboardButton('🎙️Select Your File Language🎙️', callback_data=f'languages#{search.replace(' ', '_')}#{key}')
+            InlineKeyboardButton("🎙️Select Your File Language🎙️", callback_data=f"languages#{key}")
         ]
     )  
 
