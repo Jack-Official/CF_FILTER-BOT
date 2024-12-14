@@ -21,8 +21,10 @@ from plugins.helper.admin_check import admin_fliter
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
+PM_BUTTONS = {}
 BUTTONS = {}
 SPELL_CHECK = {}
+PM_SPELL_CHECK = {}
 FILTER_MODE = {}
 G_MODE = {}
 
