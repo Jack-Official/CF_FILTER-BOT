@@ -43,10 +43,13 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➜ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➜', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🛠️ Help', callback_data='help'),
+            InlineKeyboardButton('🔍 ꜱᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('ꜱᴜᴩᴩᴏʀᴛ 💬', callback_data='support')
+        ], [ 
+            InlineKeyboardButton('⚠️ ᴀʙᴏᴜᴛ', callback_data='about'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ ✗', callback_data='close_data')
         ], [     
-            InlineKeyboardButton('✗ Click To Close This Buttons ✗', callback_data='closeme')
+            InlineKeyboardButton('✗ ᴄʟɪᴄᴋ ᴛᴏ ᴄʟᴏsᴇ ᴛʜɪs ʙᴜᴛᴛᴏɴs ✗', callback_data='closeme')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
@@ -82,7 +85,7 @@ async def start(client, message):
             except (IndexError, ValueError):
                 btn.append([InlineKeyboardButton(" 🔃Try Again🔃", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_photo(
-            photo="https://telegra.ph/file/f5d411fba25ecfa5197fe.jpg",
+            photo=FORCE_IMG,
             chat_id=message.from_user.id,
             caption=FORCE_SUB_TEXT,
             reply_markup=InlineKeyboardMarkup(btn),
@@ -93,10 +96,13 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➜ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➜', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🛠️ Help', callback_data='help'),
+            InlineKeyboardButton('🔍 ꜱᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('ꜱᴜᴩᴩᴏʀᴛ 💬', callback_data='support')
+        ], [
+            InlineKeyboardButton('⚠️ ᴀʙᴏᴜᴛ', callback_data='about'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ ✗', callback_data='close_data')
         ], [     
-            InlineKeyboardButton('✗ Click To Close This Buttons ✗', callback_data='closeme')
+            InlineKeyboardButton('✗ ᴄʟɪᴄᴋ ᴛᴏ ᴄʟᴏsᴇ ᴛʜɪs ʙᴜᴛᴛᴏɴs ✗', callback_data='closeme')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
