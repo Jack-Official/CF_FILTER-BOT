@@ -95,6 +95,19 @@ async def give_filter(client, message):
                 await auto_filter(client, message)   
 
 
+@Client.on_message(filters.private & filters.text & filters.chat(AUTH_USERS) if AUTH_USERS else filters.text & filters.private)
+async def pm_filter(client, message):
+    if PMFILTER:
+        if G_FILTER:
+            kd = await global_filters(client, message)
+            if kd == False:
+                await pm_AutoFilter(client, message)
+        else:
+            await pm_AutoFilter(client, message)
+    else:
+        return
+
+
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pv_filter(client, message):
     kd = await global_filters(client, message)
