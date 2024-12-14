@@ -471,8 +471,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ], [  
             InlineKeyboardButton('➜ Add me to Your Group ➜', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('⚠️About', callback_data='about'),
-            InlineKeyboardButton('🛠️ Help', callback_data='help'),
+            InlineKeyboardButton('🔍 ꜱᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('ꜱᴜᴩᴩᴏʀᴛ 💬', callback_data='support')
+            ],[
+            InlineKeyboardButton('⚠️ ᴀʙᴏᴜᴛ', callback_data='about'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ ✗', callback_data='close_data')
         ], [     
             InlineKeyboardButton('✗ ᴄʟɪᴄᴋ ᴛᴏ ᴄʟᴏsᴇ ᴛʜɪs ʙᴜᴛᴛᴏɴs ✗', callback_data='closeme')
         ]]
@@ -482,7 +485,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "help":
+    elif query.data == "support":
         buttons = [[
             InlineKeyboardButton('❔How To Use Me❔', callback_data='howtoues')
             ],[
@@ -491,7 +494,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)             
         await query.message.edit_text(                     
-            text=script.HELP_TXT.format(query.from_user.mention),
+            text=script.SUPPORT_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
