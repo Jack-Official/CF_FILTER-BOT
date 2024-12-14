@@ -149,18 +149,6 @@ async def next_page(bot, query):
             for file in files
         ]
         
-    btn.insert(0, 
-        [
-            InlineKeyboardButton(f'🌟 {search} 🌟', 'dupe')
-        ]
-    )
-    btn.insert(1,
-        [
-            InlineKeyboardButton("⚡Cʜᴇᴄᴋ Mʏ Pᴍ⚡", url=f"https://t.me/{temp.U_NAME}"),
-             InlineKeyboardButton("🔻𝐋𝐀𝐍𝐆𝐔𝐀𝐆𝐄𝐒🔻", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
-        ]
-    )    
-
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
@@ -944,12 +932,6 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0, 
         [
             InlineKeyboardButton(f'🌟 {search} 🌟', 'dupe')
-        ]
-    )
-    btn.insert(1,
-        [
-            InlineKeyboardButton("⚡Cʜᴇᴄᴋ Mʏ Pᴍ⚡", url=f"https://t.me/{temp.U_NAME}"),
-             InlineKeyboardButton("🔻𝐋𝐀𝐍𝐆𝐔𝐀𝐆𝐄𝐒🔻", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
         ]
     )
     if offset != "":
