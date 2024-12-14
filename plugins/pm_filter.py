@@ -16,11 +16,8 @@ from database.filters_mdb import del_all, find_filter, get_filters
 from database.gfilters_mdb import find_gfilter, get_gfilters
 from plugins.helper.admin_check import admin_fliter
 
-
-
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
-
 
 BUTTONS = {}
 SPELL_CHECK = {}
@@ -30,6 +27,7 @@ async def give_filter(client, message):
     k = await manual_filters(client, message)
     if k == False:
         await auto_filter(client, message)
+
 
 
 @Client.on_callback_query(filters.regex(r"^next"))
